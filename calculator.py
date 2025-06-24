@@ -8,3 +8,7 @@ class Shape(ABC):
     def get_area(self):
         pass
 
+    @abstractmethod
+    def get_perimeter(self):
+        pass
+

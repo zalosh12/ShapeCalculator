@@ -8,3 +8,6 @@ class Hexagon(Shape):
 
     def get_area(self):
         return (3 * sqrt(3) / 2) * self.side ** 2
+
+    def get_perimeter(self):
+        return self.side * 6

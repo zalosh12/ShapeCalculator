@@ -7,3 +7,6 @@ class Triangle(Rectangle):
 
     def get_area(self):
         return 0.5 * self.width * self.height
+
+    def get_perimeter(self):
+        return "Unknown"
