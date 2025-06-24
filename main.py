@@ -6,16 +6,14 @@ from hexagon import Hexagon
 
 def main():
     shapes = [
-        Rectangle(3,5),
-        Square(7),
-        Triangle(3,4),
+        Rectangle(5,5),
+        Square(5),
+        Triangle(3,5),
         Circle(3.56),
         Hexagon(4.5)
     ]
 
     for shape in shapes:
-        print(shape.get_area())
-        print(shape.get_perimeter())
-
+        print(shape)
 if __name__ == "__main__":
     main()

@@ -3,6 +3,10 @@ from math import pi
 
 class Circle(Shape):
     def __init__(self,radius):
+        if not isinstance(radius,(int,float)):
+            raise TypeError("Error: the side must be a number")
+        if radius <= 0:
+            raise ValueError("Error: the side must be a positive number")
         super().__init__("Circle")
         self.radius = radius
 
