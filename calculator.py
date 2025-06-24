@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-import math
 
 class Shape(ABC):
     def __init__(self,name):
