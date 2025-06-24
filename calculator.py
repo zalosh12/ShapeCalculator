@@ -12,9 +12,16 @@ class Shape(ABC):
     def get_perimeter(self):
         pass
 
+    @abstractmethod
+    def __add__(self,other):
+        pass
+
     def __str__(self):
         return f"{self.name}, Area : {self.get_area()}, Perimeter: {self.get_perimeter()}"
 
     def __eq__(self, other):
         return isinstance(other,Shape) and self.get_area() == other.get_area()
+
+
+
 

@@ -8,3 +8,10 @@ class Square(Rectangle):
             raise ValueError("Error: the side must be a positive number")
         super().__init__(side,side)
         self.name = "Square"
+
+    def __add__(self, other):
+        if not isinstance(other, Square) :
+            raise TypeError(f"Error: TypeError: unsupported operand type(s) " +
+                            f"for +: '{other.__class__.__name__}' and 'Square'")
+        new_side = self.height + other.height
+        return Square(new_side)

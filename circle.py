@@ -15,3 +15,10 @@ class Circle(Shape):
 
     def get_perimeter(self):
         return self.radius * pi * 2
+
+    def __add__(self, other):
+        if not isinstance(other, Circle) :
+            raise TypeError(f"Error: TypeError: unsupported operand type(s) "+
+                            f"for +: '{other.__class__.__name__}' and 'Circle'")
+        new_radius = self.radius + other.radius
+        return Circle(new_radius)

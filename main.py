@@ -12,6 +12,7 @@ def main():
         Circle(3.56),
         Hexagon(4.5)
     ]
+    print(shapes[1] + shapes[0])
 
     for shape in shapes:
         print(shape)

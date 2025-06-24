@@ -19,4 +19,12 @@ class Rectangle(Shape):
     def get_perimeter(self):
         return 2 * (self.height + self.width)
 
+    def __add__(self, other):
+        if not isinstance(other,Rectangle):
+            raise TypeError(f"TypeError: unsupported operand type(s) " +
+                            f"for +: '{other.__class__.__name__}' and 'Rectangle'")
+        new_width = self.width + other.width
+        new_height = self.height + other.height
+        return Rectangle(new_width,new_height)
+
 

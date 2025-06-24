@@ -16,3 +16,11 @@ class Triangle(Rectangle):
 
     def get_perimeter(self):
         return "Unknown"
+
+    def __add__(self, other) :
+        if not isinstance(other, Triangle) :
+            raise TypeError(f"Error: TypeError: unsupported operand type(s) " +
+                            f"for +: '{other.__class__.__name__}' and 'Triangle'")
+        new_width = self.width + other.width
+        new_height = self.height + other.height
+        return Triangle(new_width, new_height)
