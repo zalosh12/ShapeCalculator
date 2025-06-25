@@ -1,4 +1,5 @@
 from calculator import Shape
+from math import sqrt
 
 class Triangle(Shape):
     def __init__(self,base,height):
@@ -14,8 +15,10 @@ class Triangle(Shape):
     def get_area(self):
         return 0.5 * self.base * self.height
 
-    def get_perimeter(self) -> str:
-        return "Unknown"
+    def get_perimeter(self) :
+        hypotenuse = sqrt(self.base ** 2 + self.height ** 2)
+        return self.base + self.height + hypotenuse
+
 
     def __add__(self, other) :
         if not isinstance(other, Triangle) :
