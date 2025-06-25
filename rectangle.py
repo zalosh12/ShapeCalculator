@@ -2,7 +2,6 @@ from calculator import Shape
 
 class Rectangle(Shape):
     def __init__(self,width,height):
-
         # validate that width and height are positive numbers
         if not isinstance(width, (int, float)) or not isinstance(height, (int, float)):
             raise TypeError("Error: the side must be a number")
@@ -26,5 +25,8 @@ class Rectangle(Shape):
         new_width = self.width + other.width
         new_height = self.height + other.height
         return Rectangle(new_width,new_height)
+
+    def __repr__(self):
+        return f"Rectangle(width={self.width},height={self.height})"
 
 

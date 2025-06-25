@@ -6,6 +6,7 @@ class Square(Rectangle):
             raise TypeError("Error: the side must be a number")
         if side <= 0:
             raise ValueError("Error: the side must be a positive number")
+        self.side = side
         super().__init__(side,side)
         self.name = "Square"
 
@@ -15,4 +16,7 @@ class Square(Rectangle):
                             f"for +: '{other.__class__.__name__}' and 'Square'")
         new_side = self.height + other.height
         return Square(new_side)
+
+    def __repr__(self):
+        return f"Square(side={self.side})"
 

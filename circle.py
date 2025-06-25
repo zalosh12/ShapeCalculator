@@ -22,3 +22,6 @@ class Circle(Shape):
                             f"for +: '{other.__class__.__name__}' and 'Circle'")
         new_radius = self.radius + other.radius
         return Circle(new_radius)
+
+    def __repr__(self) :
+        return f"Circle(radius={self.radius})"

@@ -16,9 +16,12 @@ class Hexagon(Shape):
     def get_perimeter(self):
         return self.side * 6
 
-    def __add__(self, other) :
+    def __add__(self, other):
         if not isinstance(other, Hexagon) :
             raise TypeError(f"Error: TypeError: unsupported operand type(s) " +
                             f"for +: '{other.__class__.__name__}' and 'Hexagon'")
         new_side = self.side + other.side
         return Hexagon(new_side)
+
+    def __repr__(self):
+        return f"Hexagon(side={self.side})"
