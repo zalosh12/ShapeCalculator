@@ -12,7 +12,8 @@ def main():
         Circle(3.56),
         Hexagon(4.5)
     ]
-    print(shapes[1] + shapes[0])
+    # print(shapes[1] + shapes[0])
+    shapes[1].visual()
 
     for shape in shapes:
         print(shape)

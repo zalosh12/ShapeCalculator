@@ -15,3 +15,4 @@ class Square(Rectangle):
                             f"for +: '{other.__class__.__name__}' and 'Square'")
         new_side = self.height + other.height
         return Square(new_side)
+

@@ -16,6 +16,9 @@ class Shape(ABC):
     def __add__(self,other):
         pass
 
+    def __ne__(self, other) :
+        return not isinstance(other, Shape) or self.get_area() != other.get_area()
+
     def __str__(self):
         return f"{self.name}, Area : {self.get_area()}, Perimeter: {self.get_perimeter()}"
 
